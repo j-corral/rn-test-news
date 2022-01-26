@@ -9,6 +9,14 @@ export default StyleSheet.create({
         backgroundColor: Colors.white,
         paddingLeft: 20,
         borderRadius: Metrics.buttonRadius,
+        shadowColor: "#1A3252",
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.22,
+        shadowRadius: 2.22,
+        elevation: 5,
     },
     contentContainer: {
         width: Metrics.widthPercentageToDP('100%'),
