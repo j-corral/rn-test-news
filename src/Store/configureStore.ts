@@ -5,6 +5,7 @@ import rootReducer from '@/Reducers/RootReducer'
 import rootSaga from '@/Sagas/RootSaga'
 import { LyricsState } from '@/reducers/LyricsReducer'
 import { AuthState } from '@/reducers/AuthReducer'
+import { NewsState } from '@/reducers/NewsReducer'
 import { NotificationsState } from '@/reducers/NotificationsReducer'
 
 const sagaMiddleware = createSagaMiddleware()
@@ -12,6 +13,7 @@ const sagaMiddleware = createSagaMiddleware()
 export interface StoreState {
     lyrics: LyricsState
     auth: AuthState
+    news: NewsState
     notifications: NotificationsState
 }
 

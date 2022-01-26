@@ -16,12 +16,14 @@ import startup from './Startup'
 import user from './User'
 import theme from './Theme'
 import auth from './Authentification'
+import news from './News'
 
 const reducers = combineReducers({
     startup,
     user,
     theme,
     auth,
+    news,
 })
 
 const persistConfig = {
