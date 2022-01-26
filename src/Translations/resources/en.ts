@@ -9,4 +9,10 @@ export default {
             userId: 'Enter a user id',
         },
     },
+    news: {
+        title: 'News',
+    },
+    post: {
+        title: 'Article',
+    }
 }
