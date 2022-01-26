@@ -2,13 +2,13 @@ import * as actions from '@/ActionTypes/AuthActionTypes'
 import { User } from '@/Models'
 
 export function login(
-    username: string,
+    email: string,
     password: string,
     udid: string,
 ): actions.LoginAction {
     return {
         type: actions.LOGIN,
-        username,
+        email,
         password,
         udid,
     }
