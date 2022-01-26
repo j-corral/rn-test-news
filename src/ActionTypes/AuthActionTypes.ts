@@ -3,7 +3,7 @@ import { User } from '@/Models'
 export const LOGIN = 'AuthActionTypes/LOGIN'
 export interface LoginAction {
     type: typeof LOGIN
-    username: string
+    email: string
     password: string
     udid: string
 }
