@@ -29,7 +29,7 @@ const Common = {
         basicPage: {
             flex: 1,
             paddingHorizontal: Metrics.paddingHorizontal,
-            paddingTop: Metrics.isIphoneX() ? 60 : 40,
+            // paddingTop: Metrics.isIphoneX() ? 60 : 40,
             backgroundColor: Colors.background,
         },
     }),
