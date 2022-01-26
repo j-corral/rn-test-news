@@ -5,9 +5,9 @@ import * as actionTypes from '@/ActionTypes/AuthActionTypes'
 
 import api from '@/Services'
 
-function* loginCall({ username, password, udid }: actionTypes.LoginAction) {
+function* loginCall({ email, password, udid }: actionTypes.LoginAction) {
     const params = {
-        username: username,
+        email: email,
         password: password,
         udid: udid,
     }
