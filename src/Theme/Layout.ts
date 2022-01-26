@@ -42,6 +42,10 @@ const Layout = {
             flexDirection: 'row',
             alignItems: 'center',
         },
+        rowWrap: {
+            flexDirection: 'row',
+            flexWrap: "wrap",
+        },
         /* Default Layouts */
         center: {
             alignItems: 'center',
