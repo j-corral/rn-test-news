@@ -5,7 +5,7 @@ import { Common, Images } from '@/Theme'
 import i18n from '@/Translations'
 import { getNews } from '@/ActionCreators/NewsActionCreator'
 import { logout } from '@/ActionCreators/AuthActionCreator'
-import { Header } from '@/Components'
+import { Header, NewsPreview } from '@/Components'
 
 import styles from './NewsScreenStyles'
 
@@ -26,12 +26,7 @@ const NewsScreen = ({navigation}) => {
     const NewsItem = ({id, title, date, image, fallback}) => (
         <View style={[]}>
             <TouchableOpacity onPress={() => showNewsDetail(id)}>
-                <ImageBackground source={{uri: image ?? fallback}} style={[styles.newsItem]} imageStyle={[{borderRadius:15}]}>
-                    <View style={[styles.newsItemContent]}>
-                        <Text style={[styles.newsDate]}>{date}</Text>
-                        <Text style={[styles.newsTitle]}>{title}</Text>
-                    </View>
-                </ImageBackground>
+                <NewsPreview uri={image} title={title} date={date} />
             </TouchableOpacity>
         </View>
     );
