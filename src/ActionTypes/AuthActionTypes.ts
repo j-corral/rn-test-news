@@ -1,5 +1,12 @@
 import { User } from '@/Models'
 
+export const LOGOUT = 'AuthActionTypes/LOGOUT'
+export interface LogoutAction {
+    type: typeof LOGOUT
+    token: string
+    refreshToken: string
+}
+
 export const LOGIN = 'AuthActionTypes/LOGIN'
 export interface LoginAction {
     type: typeof LOGIN
@@ -46,6 +53,7 @@ export interface RegisterFailureAction {
 }
 
 export type AuthActions =
+    | LogoutAction
     | LoginAction
     | LoginSuccessAction
     | LoginFailureAction

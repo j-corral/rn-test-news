@@ -14,6 +14,14 @@ export function login(
     }
 }
 
+export function logout(): actions.LogoutAction {
+    return {
+        type: actions.LOGOUT,
+        token: "",
+        refreshToken: "",
+    }
+}
+
 export function loginSuccess(
     token: string,
     refreshToken: string,

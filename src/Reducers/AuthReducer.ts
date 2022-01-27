@@ -22,6 +22,8 @@ export default function authReducer(
     action: actions.AuthActions,
 ): AuthState {
     switch (action.type) {
+    case actions.LOGOUT:
+        return initialState
     case actions.LOGIN:
         return {
             isLoading: true,
