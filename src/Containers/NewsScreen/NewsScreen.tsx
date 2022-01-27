@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { SafeAreaView, View, Text, TouchableOpacity, ImageBackground, FlatList } from 'react-native'
+import { SafeAreaView, View, TouchableOpacity, ActivityIndicator, FlatList } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
 import { Common, Images } from '@/Theme'
 import i18n from '@/Translations'
@@ -50,7 +50,7 @@ const NewsScreen = ({navigation}) => {
     return (
         <SafeAreaView style={[Common.basicPage]}>
             <Header title={i18n.t('news.title')} uri={Images.logout} onPress={() => onLogout()}></Header>
-            {news.news?.length > 0 && (
+            {!news.isLoading && news.news?.length > 0 && (
                 <FlatList
                     data={news.news}
                     renderItem={renderItem}
@@ -58,7 +58,9 @@ const NewsScreen = ({navigation}) => {
                 />
             )}
             {news.isLoading && (
-                <Text>Loading...</Text>
+                <View style={[{flex:1, justifyContent: "center"}]}>
+                    <ActivityIndicator size="large" color="#2479C2" />
+                </View>
             )}
         </SafeAreaView>
     )

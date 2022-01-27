@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { View, Text, Image, TextInput } from 'react-native'
+import { View, Text, Image, TextInput, ActivityIndicator } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
 import { Common, Images } from '@/Theme'
 import i18n from '@/Translations'
@@ -34,27 +34,31 @@ const LoginScreen = (props) => {
                 style={[styles.backgroundImage]}
                 source={Images.loginBackground}
             />
-            <View style={[styles.contentContainer]}>
-                <View style={[styles.content]}>
-                    <Text style={[styles.title]}>
-                        {i18n.t('authentification.connection')}
-                    </Text>
-                    <View style={[styles.mailContainer]}>
-                        <Text style={[styles.sectionTitle]}>{i18n.t('authentification.mail')}</Text>
-                        <TextInput style={[styles.input, Common.basicShadow]} onChangeText={text => setEmail(text)} value={email} placeholder="jean.dupont@mail.com"></TextInput>
-                    </View>
-                    <View style={[styles.passwordContainer]}>
-                        <Text style={[styles.sectionTitle]}>{i18n.t('authentification.password')}</Text>
-                        <TextInput style={[styles.input, Common.basicShadow]} onChangeText={text => setPassword(text)} value={password} placeholder="2383"></TextInput>
-                    </View>
-                    <View style={[styles.passwordContainer]}>
-                        <BasicButton text={i18n.t('authentification.connect')} onPress={onLogin} />
+            {!auth.isLoading && (
+                <View style={[styles.contentContainer]}>
+                    <View style={[styles.content]}>
+                        <Text style={[styles.title]}>
+                            {i18n.t('authentification.connection')}
+                        </Text>
+                        <View style={[styles.mailContainer]}>
+                            <Text style={[styles.sectionTitle]}>{i18n.t('authentification.mail')}</Text>
+                            <TextInput style={[styles.input, Common.basicShadow]} onChangeText={text => setEmail(text)} value={email} placeholder="jean.dupont@mail.com"></TextInput>
+                        </View>
+                        <View style={[styles.passwordContainer]}>
+                            <Text style={[styles.sectionTitle]}>{i18n.t('authentification.password')}</Text>
+                            <TextInput style={[styles.input, Common.basicShadow]} onChangeText={text => setPassword(text)} value={password} placeholder="2383"></TextInput>
+                        </View>
+                        <View style={[styles.passwordContainer]}>
+                            <BasicButton text={i18n.t('authentification.connect')} onPress={onLogin} />
+                        </View>
                     </View>
                 </View>
-                {auth.isLoading && (
-                <Text>Loading...</Text>
             )}
-            </View>
+            {auth.isLoading && (
+                <View style={[styles.contentContainer,{flex:1, justifyContent: "center"}]}>
+                    <ActivityIndicator size="large" color="#2479C2" />
+                </View>
+            )}
         </View>
     )
 }
