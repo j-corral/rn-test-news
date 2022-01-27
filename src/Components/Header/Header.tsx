@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, TouchableOpacity, Text, Image, ImageSourcePropType } from 'react-native'
-import { Layout, Fonts, Common } from '@/Theme'
+import { Layout } from '@/Theme'
 
 // Styles
 import styles from './HeaderStyles'
@@ -16,11 +16,11 @@ interface Props {
 
 const Header = ({ title, onPress, style, uri }: Props) => {
     return (
-        <View style={[Layout.rowWrap, {alignItems:"flex-end"}]}>
-            <TouchableOpacity style={[{flex:1}]} onPress={onPress}>
-                <Image style={[Layout.row]} source={uri} />
+        <View style={[styles.container, style]}>
+            <TouchableOpacity style={[styles.button]} onPress={onPress}>
+                <Image source={uri} />
             </TouchableOpacity>
-            <Text style={[styles.title, {flex:10}]}>{title}</Text>
+            <Text style={[styles.title]}>{title}</Text>
         </View>
     )
 }
