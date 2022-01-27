@@ -15,7 +15,7 @@ const NewsPreview = ({ uri, title, date  }: Props) => {
         <View style={[styles.newsContainer]}>
             <ImageBackground source={{uri: uri}} resizeMode="cover" style={[styles.newsItem]} imageStyle={[{borderRadius:15}]}>
                 <View style={[styles.newsItemContent]}>
-                    {date != undefined && <Text style={[styles.newsDate]}>{new Date(date).toUTCString()}</Text>}
+                    {date != undefined && <Text style={[styles.newsDate]}>{new Date(date).toLocaleString('fr-FR')}</Text>}
                     <Text style={[styles.newsTitle]}>{title}</Text>
                 </View>
             </ImageBackground>
