@@ -7,85 +7,38 @@ export default StyleSheet.create({
     container: {
         flex: 1,
         padding: 20,
-        // alignItems: "center",
-        // justifyContent: "center",
-    },
-    contentContainer: {
-        width: Metrics.widthPercentageToDP('100%'),
-        height: Metrics.heightPercentageToDP('80%'),
-        paddingHorizontal: Metrics.paddingHorizontal,
-        backgroundColor: Colors.white,
-        borderTopLeftRadius: 15,
-        borderTopRightRadius: 15,
-        position: 'absolute',
-        bottom: 0,
-    },
-    contentContainerSmall: {
-        width: '100%',
-        height: Metrics.heightPercentageToDP('100%'),
-        backgroundColor: Colors.white,
-        borderTopLeftRadius: 15,
-        borderTopRightRadius: 15,
-        position: 'absolute',
-        bottom: 0,
     },
     content: {
-        width: '100%',
-        justifyContent: 'space-between',
-        paddingBottom: Metrics.isIphoneX()
-            ? Metrics.heightPercentageToDP('5%')
-            : Metrics.heightPercentageToDP('1%'),
+        flex:1, marginBottom: 50
     },
-    backgroundImage: {
-        width: Metrics.widthPercentageToDP('54%'),
-        height: Metrics.heightPercentageToDP('29%'),
-        resizeMode: 'contain',
-        position: 'absolute',
-        right: -15,
-        top: -25,
+    meta: {
+        flex:1, 
+        flexDirection:'row', 
+        alignContent:'space-between'
     },
-    title: {
-        fontFamily: Fonts.type.bold,
-        fontSize: 26,
-        width: '100%',
-        textAlign: 'center',
-        color: Colors.text,
-        paddingTop: Metrics.heightPercentageToDP('3%'),
-    },
-    newsContainer: {
-        flex: 1,
-        paddingTop: 40,
-        paddingHorizontal: 20
-    },
-    newsItem: {
-        marginTop: 30,
-        padding: 30,
-        height: 176,
-        resizeMode:'cover',
-    },
-    newsItemContent: {
-        flexDirection: 'column',
-        flex: 1,
-    },
-    newsTitle: {
-        flex: 1,
-        fontFamily: Fonts.type.bold,
-        fontSize: 18,
-        color: Colors.white,
-        justifyContent: 'flex-end',
-        alignSelf: 'flex-start',
-        direction: 'ltr',
-    },
-    newsDate: {
-        flex: 1,
+    date: {
         fontFamily: Fonts.type.base,
-        fontSize: 11,
-        color: Colors.white,
-        justifyContent: 'flex-start',
-        alignSelf: 'flex-end',
-        direction: 'rtl',
-        padding: 10,
-        backgroundColor: Colors.black,
-        borderRadius: 10,
+        fontSize: Fonts.size.medium,
+        fontStyle: 'italic',
+        color: Colors.text,
+        width: '75%',
     },
+    body: {
+        fontFamily: Fonts.type.base,
+        fontSize: Fonts.size.regular,
+        lineHeight: Fonts.size.regular * 1.5,
+        width: '100%',
+        textAlign: 'left',
+        color: Colors.text,
+        marginTop: 50,
+        marginBottom: 35,
+        paddingRight: Metrics.heightPercentageToDP('3%'),
+    },
+    share: {
+        marginLeft: 15,
+        fontFamily: Fonts.type.medium,
+        fontSize: Fonts.size.medium,
+        lineHeight: Fonts.size.medium * 1.2,
+    },
+   
 })
