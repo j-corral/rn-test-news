@@ -16,6 +16,7 @@ const Images = {
     alert: require('@/Assets/Images/Icons/Basic/alert.png'),
     greenCheck: require('@/Assets/Images/Icons/Basic/green-check.png'),
     crossBlue: require('@/Assets/Images/Icons/Basic/cross-blue.png'),
+    logout: require('@/Assets/Images/Icons/Basic/logout.png'),
 
     // Notifications
     warning: require('@/Assets/Images/Icons/Notifications/warning.png'),
