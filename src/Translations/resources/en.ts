@@ -14,5 +14,8 @@ export default {
     },
     post: {
         title: 'Article',
+    },
+    share: {
+        name: 'Share',
     }
 }

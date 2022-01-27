@@ -52,5 +52,8 @@ export default {
     },
     post: {
         title: 'Article',
+    },
+    share: {
+        name: 'Partager',
     }
 }
