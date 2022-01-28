@@ -20,3 +20,12 @@ react-native run-ios
 ```
 
 Si cette commande ne fonctionne pas, ouvrir directement le fichier xcworkspace et lancez le projet via Xcode
+
+
+# Rendering
+
+## Android
+
+![Login](res/login.jpg)
+![News](res/news.jpg)
+![Detail](res/detail.jpg)
